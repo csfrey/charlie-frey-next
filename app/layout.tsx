@@ -22,10 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} bg-slate-900 text-green-500 min-h-screen`}
+        className={`${font.className} bg-slate-900 text-green-500 min-h-screen `}
       >
         <div className="p-2 h-screen box-border">
-          <fieldset className="h-full border-2 border-green-500 p-4 overflow-scroll">
+          <fieldset
+            className="h-full border-2 border-green-500 p-4 overflow-y-scroll scroll-bg-none"
+            style={{
+              scrollbarWidth: "thin",
+              scrollbarColor: "#22c55e #0f172a",
+            }}
+          >
             <legend>
               <Link href="/">charliefrey.io</Link>
             </legend>
