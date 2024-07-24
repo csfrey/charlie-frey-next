@@ -1,3 +1,4 @@
+import { codewars, github, linkedIn } from "@/app/constants";
 import LoadFirst from "./components/LoadFirst";
 import MenuItem from "./components/MenuItem";
 
@@ -16,7 +17,7 @@ const charlie = `
 ██║     ██╔══██║██╔══██║██╔══██╗██║     ██║██╔══╝      ██╔══╝  ██╔══██╗██╔══╝    ╚██╔╝  
 ╚██████╗██║  ██║██║  ██║██║  ██║███████╗██║███████╗    ██║     ██║  ██║███████╗   ██║   
  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝   ╚═╝   
-                                                                                        
+ 
 `;
 
 export default function Home() {
@@ -29,10 +30,11 @@ export default function Home() {
             Crafting the next generation of software solutions
           </div>
           <div className="mx-auto mt-4 flex flex-col text-center">
-            <MenuItem text="Work History" href="/history" />
-            <MenuItem text="Projects" href="/projects" />
-            <MenuItem text="Downloads" href="/downloads" />
+            <MenuItem text="About" href="/about" />
             <MenuItem text="Contact" href="/contact" />
+            <MenuItem text="LinkedIn" href={linkedIn} />
+            <MenuItem text="GitHub" href={github} />
+            <MenuItem text="CodeWars" href={codewars} />
           </div>
         </div>
       </main>

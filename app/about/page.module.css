@@ -1,0 +1,24 @@
+.resume h1 {
+  margin: 0.5rem 0;
+  text-decoration: underline;
+}
+.resume h2 {
+  margin: 0.5rem 0;
+  text-decoration: underline;
+}
+.resume h3 {
+  margin: 0.5rem 0;
+  text-decoration: underline;
+}
+.resume h4 {
+  margin: 0.5rem 0;
+  text-decoration: underline;
+}
+
+.resume li {
+  margin-left: 0.5rem;
+}
+
+.resume p {
+  margin-left: 0.5rem;
+}
