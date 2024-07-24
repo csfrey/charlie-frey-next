@@ -61,7 +61,12 @@ const About = () => {
       <main className="w-full h-full flex flex-col justify-center p-4">
         <div className="h-full flex justify-evenly">
           <div className="left-side w-5/12 flex flex-col justify-between">
-            <fieldset className="h-4/6 border-2 border-green-500 p-4">
+            <fieldset
+              className="h-4/6 border-2 border-green-500 p-4 overflow-y-scroll"
+              style={{
+                scrollbarWidth: "thin",
+              }}
+            >
               <legend>About</legend>
               <p>{bio}</p>
               <p className="mt-4">{hobbies}</p>
@@ -72,14 +77,14 @@ const About = () => {
                 className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
                 onClick={downloadMd}
               >
-                <DownloadIcon height="60px" />
+                <DownloadIcon height="50%" />
                 <div>resume.md</div>
               </div>
               <div
                 className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
                 onClick={downloadDocx}
               >
-                <DownloadIcon height="60px" />
+                <DownloadIcon height="50%" />
                 <div>resume.docx</div>
               </div>
             </fieldset>
