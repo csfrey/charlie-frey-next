@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const font = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${font.className} bg-slate-900 text-green-500 min-h-screen`}
+      >
+        <div className="p-2 h-screen box-border">
+          <fieldset className="h-full border-2 border-green-500 p-4 overflow-scroll">
+            <legend>
+              <Link href="/">charliefrey.io</Link>
+            </legend>
+            {children}
+          </fieldset>
+        </div>
+      </body>
     </html>
   );
 }
