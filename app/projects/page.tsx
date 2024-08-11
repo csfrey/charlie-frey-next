@@ -80,7 +80,7 @@ const Project = ({ project }: { project: ProjectT }) => {
   return (
     <Link
       href={link}
-      target="_blank"
+      target={link !== "" ? "_blank" : undefined}
       className="grid grid-cols-3 gap-4 border-2 border-green-500 hover:border-green-300 p-2"
     >
       <img src={image} className="object-cover" />
