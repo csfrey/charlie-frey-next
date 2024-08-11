@@ -74,12 +74,11 @@ const projects: Array<ProjectT> = [
   },
 ];
 
-const Project = ({ project, key }: { project: ProjectT; key: string }) => {
+const Project = ({ project }: { project: ProjectT }) => {
   const { title, subtitle, description, role, tech, image, link } = project;
 
   return (
     <Link
-      key={key}
       href={link}
       target="_blank"
       className="grid grid-cols-3 gap-4 border-2 border-green-500 hover:border-green-300 p-2"
@@ -99,7 +98,7 @@ const Project = ({ project, key }: { project: ProjectT; key: string }) => {
 const Projects = () => {
   return (
     <LoadFirst>
-      <main className="w-full h-full flex flex-col justify-evenly px-36">
+      <main className="w-full h-full flex flex-col justify-evenly lg:px-36 md:px-36">
         <h1 className="text-2xl">Projects</h1>
         <div className="projects-container grid auto-rows-auto lg:grid-cols-2 gap-4 py-4">
           {projects.map((project, i) => (

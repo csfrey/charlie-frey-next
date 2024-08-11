@@ -73,10 +73,10 @@ const About = () => {
         <fieldset
           className={`h-full border-2 border-green-500 p-4 overflow-y-scroll row-span-5 ${style.resume}`}
         >
-          <legend>resume.md</legend>
+          <legend>Preview: resume.md</legend>
           <Markdown>{md}</Markdown>
         </fieldset>
-        <fieldset className="border-2 border-green-500 p-4 flex justify-evenly row-span-1">
+        <fieldset className="border-2 border-green-500 px-4 flex justify-evenly row-span-1">
           <legend>Downloads</legend>
           <div
             className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"

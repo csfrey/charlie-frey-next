@@ -1,6 +1,7 @@
 export const linkedIn = "https://www.linkedin.com/in/csfrey95";
 export const github = "https://github.com/csfrey";
 export const codewars = "https://www.codewars.com/users/charliesage";
+export const medium = "https://charliefrey.medium.com";
 export const mdUri =
   "https://api.github.com/repos/csfrey/csfrey/contents/documents/resume.md";
 
