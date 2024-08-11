@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import style from "./page.module.css";
-import DownloadIcon from "@/app/icons/download";
+import DownloadIcon from "../icons/DownloadIcon";
 
 const About = () => {
   const [md, setMd] = useState<any>();
@@ -58,46 +58,41 @@ const About = () => {
 
   return (
     <LoadFirst>
-      <main className="w-full h-full flex flex-col justify-center p-4">
-        <div className="h-full flex justify-evenly">
-          <div className="left-side w-5/12 flex flex-col justify-between">
-            <fieldset
-              className="h-4/6 border-2 border-green-500 p-4 overflow-y-scroll"
-              style={{
-                scrollbarWidth: "thin",
-              }}
-            >
-              <legend>About</legend>
-              <p>{bio}</p>
-              <p className="mt-4">{hobbies}</p>
-            </fieldset>
-            <fieldset className="h-1/5 border-2 border-green-500 p-4 flex justify-evenly">
-              <legend>Downloads</legend>
-              <div
-                className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
-                onClick={downloadMd}
-              >
-                <DownloadIcon height="50%" />
-                <div>resume.md</div>
-              </div>
-              <div
-                className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
-                onClick={downloadDocx}
-              >
-                <DownloadIcon height="50%" />
-                <div>resume.docx</div>
-              </div>
-            </fieldset>
+      <main className="w-full lg:h-full lg:px-36 md:px-36 pb-4 lg:grid lg:grid-cols-2 lg:grid-rows-5 gap-8">
+        <fieldset
+          className="border-2 border-green-500 p-4 overflow-y-scroll row-span-4"
+          style={{
+            scrollbarWidth: "thin",
+          }}
+        >
+          <legend>About</legend>
+          <p>{bio}</p>
+          <p className="mt-4">{hobbies}</p>
+        </fieldset>
+
+        <fieldset
+          className={`h-full border-2 border-green-500 p-4 overflow-y-scroll row-span-5 ${style.resume}`}
+        >
+          <legend>resume.md</legend>
+          <Markdown>{md}</Markdown>
+        </fieldset>
+        <fieldset className="border-2 border-green-500 p-4 flex justify-evenly row-span-1">
+          <legend>Downloads</legend>
+          <div
+            className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
+            onClick={downloadMd}
+          >
+            <DownloadIcon height="2rem" />
+            <div>resume.md</div>
           </div>
-          <div className="right-side w-5/12">
-            <fieldset
-              className={`h-full border-2 border-green-500 p-4 overflow-y-scroll ${style.resume}`}
-            >
-              <legend>resume.md</legend>
-              <Markdown>{md}</Markdown>
-            </fieldset>
+          <div
+            className="cursor-pointer active:translate-x-0.5 active:translate-y-0.5"
+            onClick={downloadDocx}
+          >
+            <DownloadIcon height="2rem" />
+            <div>resume.docx</div>
           </div>
-        </div>
+        </fieldset>
       </main>
     </LoadFirst>
   );

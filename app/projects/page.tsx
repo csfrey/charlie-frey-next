@@ -99,7 +99,7 @@ const Project = ({ project, key }: { project: ProjectT; key: string }) => {
 const Projects = () => {
   return (
     <LoadFirst>
-      <main className="w-full h-full flex flex-col justify-evenly">
+      <main className="w-full h-full flex flex-col justify-evenly px-36">
         <h1 className="text-2xl">Projects</h1>
         <div className="projects-container grid auto-rows-auto lg:grid-cols-2 gap-4 py-4">
           {projects.map((project, i) => (
