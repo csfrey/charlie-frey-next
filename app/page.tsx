@@ -32,9 +32,10 @@ export default function Home() {
           <div className="mx-auto mt-4 flex flex-col text-center">
             <MenuItem text="About" href="/about" />
             <MenuItem text="Contact" href="/contact" />
-            <MenuItem text="LinkedIn" href={linkedIn} />
-            <MenuItem text="GitHub" href={github} />
-            <MenuItem text="CodeWars" href={codewars} />
+            <MenuItem text="Projects" href="/projects" />
+            <MenuItem text="LinkedIn" href={linkedIn} target="_blank" />
+            <MenuItem text="GitHub" href={github} target="_blank" />
+            <MenuItem text="CodeWars" href={codewars} target="_blank" />
           </div>
         </div>
       </main>

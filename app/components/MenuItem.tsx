@@ -3,14 +3,14 @@ import Link from "next/link";
 const MenuItem = ({
   text,
   href,
-  selected = false,
+  target,
 }: {
   text: string;
   href: string;
-  selected?: boolean;
+  target?: string;
 }) => {
   return (
-    <Link className="text-center hover:underline" href={href}>
+    <Link target={target} className="text-center hover:underline" href={href}>
       {text}
     </Link>
   );
