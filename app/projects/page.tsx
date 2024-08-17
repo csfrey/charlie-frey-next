@@ -51,16 +51,16 @@ const projects: Array<ProjectT> = [
     role: "Front-end engineer",
     tech: "Angular, TypeScript",
     image: "/images/password-generator.jpeg",
-    link: "",
+    link: "https://password-generator-xyp5.onrender.com",
   },
   {
-    title: "Moody - Mood Tracker (WIP)",
+    title: "Mood Journey",
     subtitle: "Personal Project (2024)",
     description: "Mood tracking and journaling app",
     role: "Full-stack engineer",
     tech: "NextJS, React, MongoDB",
-    image: "/images/moody.jpeg",
-    link: "",
+    image: "/images/mood-tracker.jpeg",
+    link: "https://mood-journey.vercel.app",
   },
   {
     title: "Library of the Leviathan (WIP)",
@@ -80,7 +80,7 @@ const Project = ({ project }: { project: ProjectT }) => {
   return (
     <Link
       href={link}
-      target={link !== "" ? "_blank" : undefined}
+      target={link === "" ? undefined : "_blank"}
       className="grid grid-cols-3 gap-4 border-2 border-green-500 hover:border-green-300 p-2"
     >
       <img src={image} className="object-cover" />
